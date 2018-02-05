@@ -4,7 +4,6 @@ import Input from '../index';
 
 import './index.less';
 import 'bootstrap';
-import 'jquery.easing';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,7 +11,7 @@ class App extends React.Component {
 
     this.state = {
       model: {
-        username: "default_username"
+        username: "try_me"
       }
     };
   }
@@ -23,12 +22,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="col-md-8 col-md-offset-2">
-        <Input.Form model={ this.state.model } onChange={this.handleFormChange.bind(this)}>
-          <Input.Text key="username" name="username" label="Username" required/>
-          <Input.Password key="password" name="password" label="Password" required/>
-        </Input.Form>
-        <p>{ this.state.model.username }</p>
+      <div className="row">
+        <div className="col-md-6">
+          <h1 className="cover-heading">Bootstrap form elements as React components</h1>
+          <br/>
+          <p className="lead">A collection of React components which render form elements, with data model handling and optional validation.</p>
+          <p className="lead"><a href="#" className="btn btn-lg btn-default">Learn more</a></p>
+        </div>
+        <div className="col-md-offset-1 col-md-5">
+          <Input.Form model={ this.state.model } onChange={this.handleFormChange.bind(this)}>
+            <Input.Text key="username" name="username" label="Username" required/>
+            <Input.Password key="password" name="password" label="Password" required/>
+          </Input.Form>
+          <p><span className="fas fa-info-circle"></span> <em>Start typing into the form to see the relevant code snippets.</em></p>
+        </div>
       </div>
     );
   }
@@ -48,13 +55,3 @@ $(window).scroll(function() {
     }
 });
 
-//jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
