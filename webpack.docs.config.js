@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = env => {
   const config = {
@@ -24,14 +25,14 @@ module.exports = env => {
           test: /\.less$/,
           exclude: path.resolve(__dirname, 'node_modules'),
           use: [
-            'style-loader',
+            MiniCssExtractPlugin.loader,
             'css-loader',
             'less-loader'
           ]
         },
         {
           test: /\.(woff2?|eot|ttf|otf|svg)$/,
-          use: ['url-loader']
+          use: ['file-loader']
         }
       ]
     },
@@ -42,6 +43,9 @@ module.exports = env => {
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery'
+      }),
+      new MiniCssExtractPlugin({
+        filename: "[name].css"
       })
     ]
   };
