@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import Input from '../index';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faInfoCircle} from '@fortawesome/free-solid-svg-icons';
-import {faGithub} from '@fortawesome/free-brands-svg-icons';
+import faInfoCircle from '@fortawesome/free-solid-svg-icons/faInfoCircle';
+import {faGithub} from '@fortawesome/free-brands-svg-icons/faGithub';
 
 import './index.less';
 import 'bootstrap';
