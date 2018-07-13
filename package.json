@@ -2,24 +2,38 @@
   "name": "react-bootstrap-input",
   "version": "0.0.1",
   "description": "A collection of ReactJS components which render bootstrap input elements.",
-  "main": "lib/index.js",
-  "module": "dist/react-bootstrap-input.es.js",
-  "scripts": {
-    "clean": "rimraf dist && rimraf docs",
-    "build:babel": "babel src -d lib",
-    "build": "npm run clean && npm run build:babel"
-  },
   "author": "Can Bulut Bayburt",
   "license": "MIT",
+  "main": "lib/index.js",
+  "module": "dist/react-bootstrap-input.es.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cbbayburt/react-bootstrap-input.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist && rimraf lib && rimraf docs",
+    "build:dist": "rollup -c",
+    "build:lib": "babel src -d lib",
+    "build": "npm run clean && npm run build:lib && npm run build:dist"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^4.0.0"
   },
   "dependencies": {
     "react": "^16.1.1"
-  }
+  },
+  "files": [
+    "dist",
+    "lib"
+  ]
 }
