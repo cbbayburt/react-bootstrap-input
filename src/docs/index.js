@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Input from '../index';
+import Input from 'react-bootstrap-input';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import faInfoCircle from '@fortawesome/free-solid-svg-icons/faInfoCircle';
