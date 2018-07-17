@@ -1,4 +1,4 @@
-import {Text, Password, Check, Select, Label, FormGroup} from './Elements';
+import { Text, Password, Check, Select, Label, FormGroup } from './Elements';
 import Form from './Form';
 
 export default {
@@ -11,4 +11,4 @@ export default {
   Form: Form
 };
 
-export {Text, Password, Check, Select, Label, FormGroup, Form};
+export { Text, Password, Check, Select, Label, FormGroup, Form };

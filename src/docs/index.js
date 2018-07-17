@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Input from 'react-bootstrap-input';
 
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import faInfoCircle from '@fortawesome/free-solid-svg-icons/faInfoCircle';
-import {faGithub} from '@fortawesome/free-brands-svg-icons/faGithub';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 
 import './index.less';
 import 'bootstrap';
+
+/* eslint-env jquery */
 
 class App extends React.Component {
   constructor(props) {
@@ -15,12 +17,12 @@ class App extends React.Component {
 
     this.state = {
       model: {
-        username: "try_me"
+        username: 'try_me'
       }
     };
   }
 
-  handleFormChange(model, isValid) {
+  handleFormChange(model) {
     this.setState({ model: model });
   }
 
@@ -74,10 +76,10 @@ ReactDOM.render(
 
 //jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-    }
+  if ($('.navbar').offset().top > 50) {
+    $('.navbar-fixed-top').addClass('top-nav-collapse');
+  } else {
+    $('.navbar-fixed-top').removeClass('top-nav-collapse');
+  }
 });
 
