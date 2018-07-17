@@ -34,7 +34,7 @@ class App extends React.Component {
             <h3 className="masthead-brand">react-bootstrap-input</h3>
             <nav>
               <ul className="nav masthead-nav">
-                <li><a href="https://github.com/cbbayburt/react-bootstrap-input" target="_blank"><FontAwesomeIcon icon={faGithub} size="lg"/> View on GitHub</a></li>
+                <li><a href="https://github.com/cbbayburt/react-bootstrap-input"><FontAwesomeIcon icon={faGithub} size="lg"/> View on GitHub</a></li>
                 <li><a className="github-button" href="https://github.com/cbbayburt/react-bootstrap-input" data-icon="octicon-star" data-show-count="true" aria-label="Star cbbayburt/react-bootstrap-input on GitHub">Star</a></li>
               </ul>
             </nav>
