@@ -39,6 +39,8 @@
     "less": "^3.7.1",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.4.1",
     "rimraf": "^2.6.2",
     "rollup": "^0.62.0",
     "rollup-plugin-babel": "^3.0.7",
@@ -47,9 +49,9 @@
     "webpack": "^4.16.0",
     "webpack-cli": "^3.0.8"
   },
-  "dependencies": {
-    "react": "^16.1.1",
-    "react-dom": "^16.4.1"
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^16.1.1"
   },
   "files": [
     "dist",
