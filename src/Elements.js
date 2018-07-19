@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import InputBase from './InputBase';
 
 export class Text extends InputBase {
@@ -94,10 +95,20 @@ export const Label = function(props) {
   );
 };
 
+Label.propTypes = {
+  className: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  required: PropTypes.bool.isRequired
+};
+
 export const Hint = function(props) {
   return (
     <div className="help-block">{props.text}</div>
   );
+};
+
+Hint.propTypes = {
+  text: PropTypes.string.isRequired
 };
 
 export const FormGroup = function(props) {
@@ -106,4 +117,12 @@ export const FormGroup = function(props) {
       {props.children}
     </div>
   );
+};
+
+FormGroup.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
+  isError: PropTypes.bool
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import InputBase from './InputBase';
 
 class Form extends React.Component {
@@ -163,5 +164,19 @@ class Form extends React.Component {
     );
   }
 }
+
+Form.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
+  className: PropTypes.any,
+  divClass: PropTypes.any,
+  model: PropTypes.object.isRequired,
+  onChange: PropTypes.function,
+  onSubmit: PropTypes.function,
+  onSubmitInvalid: PropTypes.function,
+  onValidate: PropTypes.function
+};
 
 export default Form;
